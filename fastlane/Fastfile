@@ -312,7 +312,7 @@ platform :ios do
     end
 
     # Write result to new_certificate_needed.txt
-    file_path = File.expand_path('new_certificate_needed.txt')
+    file_path = File.expand_path('new_certificate_needed.txt', File.dirname(__FILE__))
     File.write(file_path, new_certificate_needed ? 'true' : 'false')  
 
     # Log the absolute path and contents of the new_certificate_needed.txt file
